@@ -41,7 +41,7 @@ app.use("/api/auth", authRoutes);
 app.get("/api/reset", seedSuperAdmin);
 // Error handling
 app.use(errorHandler);
-app.get("*", (req, res) => {
+app.get("*", (_req, res) => {
   res.sendFile("/var/www/glomium/dca/dcab/dist/index.html");
 });
 // Start server

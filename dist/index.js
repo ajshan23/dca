@@ -36,6 +36,9 @@ app.use("/api/users", userRoutes_1.default);
 app.use("/api/auth", authRoutes_1.default);
 app.get("/api/reset", superAdminSeeder_1.seedSuperAdmin);
 app.use(errorHandler_1.errorHandler);
+app.get("*", (_req, res) => {
+    res.sendFile("/var/www/glomium/dca/dcab/dist/index.html");
+});
 async function startServer() {
     try {
         await (0, database_1.default)();
