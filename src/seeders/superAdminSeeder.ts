@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import User from "../models/userModel";
-import config from "../config";
+
 import { UserRole } from "../models/userModel";
 
 // Super Admin data

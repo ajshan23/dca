@@ -2,12 +2,12 @@ import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import User, { UserRole } from "../models/userModel";
 import { AppError } from "../utils/errorHandler";
-import config from "../config";
+
 import { Types } from "mongoose";
 
 export async function authenticateJWT(
   req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ) {
   try {

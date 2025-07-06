@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import User, { UserRole } from "../models/userModel";
 import { AppError } from "../utils/errorHandler";
 
-export async function getAllUsers(req: Request, res: Response) {
+export async function getAllUsers(_req: Request, res: Response) {
   try {
     const users = await User.find({}, { passwordHash: 0 });
     res.json({ success: true, data: users });

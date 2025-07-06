@@ -3,7 +3,6 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User, { UserRole } from "../models/userModel";
 import { AppError } from "../utils/errorHandler";
-import config from "../config";
 
 export async function login(req: Request, res: Response) {
   try {
@@ -142,7 +141,7 @@ export async function updateUser(req: Request, res: Response) {
       success: true,
       data: {
         id: updatedUser!._id,
-        username: updatedUser!.username
+        username: updatedUser!.username,
       },
     });
   } catch (error) {

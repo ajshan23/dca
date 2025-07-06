@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import ProductAssignment from "../models/productAssignmentModel";
-import Product, { IProduct } from "../models/productModel";
+import Product from "../models/productModel";
 import { AppError } from "../utils/errorHandler";
 import mongoose from "mongoose";
 import Employee from "../models/employeeModel";
@@ -110,7 +110,7 @@ export async function returnProduct(req: Request, res: Response) {
     throw error;
   }
 }
-export async function getActiveAssignments(req: Request, res: Response) {
+export async function getActiveAssignments(_req: Request, res: Response) {
   try {
     // Define interface for the populated assignment
     interface PopulatedAssignment {

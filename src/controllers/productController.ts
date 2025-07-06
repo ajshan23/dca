@@ -85,7 +85,7 @@ export async function createProduct(req: Request, res: Response) {
   }
 }
 
-export async function getAllProducts(req: Request, res: Response) {
+export async function getAllProducts(_req: Request, res: Response) {
   try {
     const products = await Product.find()
       .populate("category", "name")

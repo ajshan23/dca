@@ -11,7 +11,6 @@ import { authorizeRoles } from "../middlewares/roleMiddleware";
 import { UserRole } from "../models/userModel";
 import { validateRequest } from "../middlewares/validationMiddleware";
 import {
-  createBranchSchema,
   updateBranchSchema,
 } from "../validations/branchValidations";
 

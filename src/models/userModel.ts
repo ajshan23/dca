@@ -46,7 +46,7 @@ const userSchema = new mongoose.Schema<IUser>(
   {
     timestamps: true,
     toJSON: {
-      transform: function (doc, ret) {
+      transform: function (_doc, ret) {
         delete ret.passwordHash;
         return ret;
       },

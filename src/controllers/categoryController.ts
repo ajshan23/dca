@@ -33,7 +33,7 @@ export async function createCategory(req: Request, res: Response) {
   }
 }
 
-export async function getAllCategories(req: Request, res: Response) {
+export async function getAllCategories(_req: Request, res: Response) {
   try {
     const categories = await Category.find();
     res.json({ success: true, data: categories });

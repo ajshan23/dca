@@ -3,13 +3,6 @@ import { createUser, login, updateUser } from "../controllers/authController";
 import { authenticateJWT } from "../middlewares/authMiddleware";
 import { authorizeRoles } from "../middlewares/roleMiddleware";
 import { UserRole } from "../models/userModel";
-import { validateRequest } from "../middlewares/validationMiddleware";
-import {
-  loginSchema,
-  createUserSchema,
-  updateUserSchema,
-} from "../validations/authValidations";
-
 const router = express.Router();
 
 router.post(

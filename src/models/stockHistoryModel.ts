@@ -1,4 +1,4 @@
-import mongoose, { Document, Model, Types } from "mongoose";
+import mongoose, { Document, Types } from "mongoose";
 
 type StockHistoryType = "assignment" | "return" | "adjustment" | "initial";
 

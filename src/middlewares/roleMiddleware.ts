@@ -3,7 +3,7 @@ import { AppError } from "../utils/errorHandler";
 import { UserRole } from "../models/userModel";
 
 export function authorizeRoles(...roles: UserRole[]) {
-  return (req: Request, res: Response, next: NextFunction) => {
+  return (req: Request, _res: Response, next: NextFunction) => {
     if (!req.user) {
       throw new AppError("Authentication required", 401);
     }
