@@ -38,10 +38,12 @@ app.use("/api/branches", branchRoutes);
 app.use("/api/employees", employeeRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
-app.get("/api/reset",seedSuperAdmin)
+app.get("/api/reset", seedSuperAdmin);
 // Error handling
 app.use(errorHandler);
-
+app.get("*", (req, res) => {
+  res.sendFile("/var/www/glomium/dca/dcab/dist/index.html");
+});
 // Start server
 async function startServer(): Promise<void> {
   try {
